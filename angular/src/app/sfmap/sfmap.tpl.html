@@ -1,0 +1,23 @@
+<div id="sfmap">
+  <h1>San Francisco Movie Map</h1>
+  <div class="row-fluid">
+    <div id="movie-wrap" class="span6">
+      <div id="typeahead-wrap">
+        <input class="typeahead" type="text" placeholder="e.g. Vertigo">
+      </div>
+      <div id="movie-info-wrap" class="hidden-phone" ng-show="!!movie">
+        <h3>{{ movie.title }} <span>({{ movie.year}})</span></h3>
+        <h4>Director: {{ movie.director }}</h4>
+        <h4>Locations: </h4>
+        <ul>
+          <li ng-repeat="location in movie.locations">
+            <p ng-mouseover="showInfowindow($index)"
+               class="movie-location">{{ location.name }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="google-map-wrap" class="span6">
+    </div>
+  </div>
+</div>

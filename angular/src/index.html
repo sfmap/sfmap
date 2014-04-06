@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC6GQIRWnit4vjGILY6gbic1p8nPTJCBGY&sensor=false"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="masthead">
+        <h3><a href="#/" class="muted">Take Home Test from Uber</a> <small><a href="#/about">About</a></small></h3>
+      </div>
+    </div>
+
+    <div class="container-fluid content-wrap" ui-view="main"></div>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer-inner">
+          <p>
+            (c) 2014 Kan Wu.
+            <br />
+            San Francisco Movie Map is based on
+            <a href="http://flask.pocoo.org/">Flask</a>,
+            <a href="http://redis.io/">redis</a>,
+            <a href="http://www.angularjs.org">AngularJS</a>,
+            <a href="http://getbootstrap.com">Bootstrap</a>,
+            and
+            <a href="http://angular-ui.github.com/bootstrap">UI Bootstrap</a>.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
