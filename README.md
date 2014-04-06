@@ -10,6 +10,8 @@ San Francisco Movie Map - Uber Test
 Install [virtualenv](http://www.virtualenv.org/en/latest/virtualenv.html#installation), [pip](http://pip.readthedocs.org/en/latest/installing.html), [Redis](http://redis.io/download) and then
 
 ```sh
+$ virtualenv env
+$ source env/bin/activate
 $ pip install -r requirements.txt
 $ cd script/
 $ python load_film_locations_to_redis.py
